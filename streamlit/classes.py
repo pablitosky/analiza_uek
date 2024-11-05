@@ -1,0 +1,3 @@
+# Klasy
+class Dataset:
+    ...
