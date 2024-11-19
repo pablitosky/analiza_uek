@@ -1,4 +1,9 @@
-# Funkcje 
+# Funkcje
+import pandas as pd
+from classes import Database
 
-def say_hello():
-    return "Hello, World!"
+
+def validate_name(name):
+    if name in Database.list_datasets():
+        return False
+    return True
