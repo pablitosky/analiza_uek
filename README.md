@@ -1,6 +1,8 @@
 # Analiza i projektowanie obiektowe
 Repozytorium w ramach ćwiczeń z zajęć Analiza i projektowanie obiektowe dla grupy ZIISS1-3511IO
 
+Link do zajęć 18.12, godzina 19:15 https://meet.google.com/zpz-cwaw-ixc
+
 ### Zaliczenie - Do prof. Wołoszyna przekazane zostaną informacje o zaangażowaniu na ćwiczeniach oraz proponowane oceny:
 - 3.5 - uruchomienie i podstawowa znajomość aplikacji
 - 4.0 - dodanie nowych zbiorów danych i dokonanie analiz
