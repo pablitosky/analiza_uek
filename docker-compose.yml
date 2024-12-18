@@ -1,0 +1,35 @@
+services:
+  # APP
+  web:
+    build:
+      context: ./streamlit
+      dockerfile: Dockerfile
+    command: streamlit run app.py --server.port 8501
+    volumes: ['./streamlit:/app']
+    restart: unless-stopped
+    ports:
+        - 8501:8501
+    environment:
+      MLFLOW_S3_ENDPOINT_URL: http://minio:8000
+      DEFAULT_ARTIFACT_ROOT: s3://mlflow/
+      AWS_ACCESS_KEY_ID: EPUGrBPNX
+      AWS_SECRET_ACCESS_KEY: joRpSlfHMPtQ
+      DATABASE: "minio"
+  
+  minio:
+    image: minio/minio
+    command: server --address ":8000" --console-address ":8001" /data
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+    environment:
+      MINIO_ROOT_USER: minio_admin
+      MINIO_ROOT_PASSWORD: admin123
+      MINIO_ACCESS_KEY: EPUGrBPNX
+      MINIO_SECRET_KEY: joRpSlfHMPtQ
+    volumes: 
+      - minio_data:/data
+
+volumes:
+  minio_data:

@@ -1,0 +1,16 @@
+{
+    "ID": "BucketPolicy",
+    "Statement": [
+     {
+      "Sid": "AllAccess",
+      "Effect": "Allow",
+      "Action": [
+       "s3:*"
+      ],
+      "Resource": [
+       "arn:aws:s3:::data",
+       "arn:aws:s3:::data/*"
+      ]
+     }
+    ]
+}
